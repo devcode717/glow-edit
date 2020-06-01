@@ -1,6 +1,11 @@
 from Tkinter import *
 import tkFileDialog
 
+root = Tk(className="glowEdit")
+
+text = Text(root)
+text.grid()
+
 def saveas():
     global text
     t = text.get("1.0", "end-1c")
@@ -11,10 +16,5 @@ def saveas():
 
 button = Button(root, text="Save", command=saveas)
 button.grid()
-
-root = Tk(className="glowEdit")
-
-text = Text(root)
-text.grid()
 
 root.mainloop()
